@@ -7,10 +7,9 @@
     <title>Margarate Home Page</title>
 
     <!-- Bootstrap -->
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-	<script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
-	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css">
-	<script src="http://cdn.bootcss.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<script src="/js/bootstrap.min.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -59,7 +58,7 @@
         <h1><%= title %></h1>
         <p>This is a template showcasing the optional theme stylesheet included in Bootstrap. Use it as a starting point to create something more unique by building on or modifying it.</p>
       </div>
-	<form>
+	<form action="/" method="post">
       <div class="row">
         <a name='Encoding' id='Encoding'></a>
         <div class="col-sm-8">
@@ -70,11 +69,11 @@
             <div class="panel-body">
               	Input your text:
 		  		<p></p>
-		  		<textarea name="" class="form-control" style='height:300px;' placeholder="" aria-describedby="sizing-addon3"></textarea>
+		  		<textarea name="encodingString" class="form-control" style='height:300px;' placeholder="" aria-describedby="sizing-addon3"></textarea>
 		  		<p></p>
 		  		<div class="btn-group" role="group" aria-label="...">
 				  <button type="reset" class="btn btn-primary">Reset</button>
-				  <button type="button" class="btn btn-success">Submit</button>
+				  <button type="submit" class="btn btn-success">Submit</button>
 				</div>
             </div>
           </div>
