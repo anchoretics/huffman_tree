@@ -23,7 +23,9 @@ router.post('/Encoding', function(req, res, next) {
 			'Content-Type': 'text/plain',
 			'Content-Disposition': 'attachment; filename="encode.txt"'
 		});
-		//
+		//encode string
+		//encodeString = Encypt(encodeString);
+		//send encoded string
 		res.send(encodeString);
 		retData.encodeString = encodeString+'--';
 	}else{
