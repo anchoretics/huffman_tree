@@ -13,7 +13,7 @@ router.get('/', function(req, res, next) {
   res.render('index', retData);
 });
 
-//deal Encoding posted form
+//Deal posted encoding form
 router.post('/Encoding', function(req, res, next) {
 	//if posted encodeString is not null,then do Encoding & send to Client
 	if(req.body.encodeString){
@@ -23,6 +23,7 @@ router.post('/Encoding', function(req, res, next) {
 			'Content-Type': 'text/plain',
 			'Content-Disposition': 'attachment; filename="encode.txt"'
 		});
+		//
 		res.send(encodeString);
 		retData.encodeString = encodeString+'--';
 	}else{
@@ -31,15 +32,16 @@ router.post('/Encoding', function(req, res, next) {
 
 });
 
-//deal Decoding posted form
+//Deal posted decoding form
 router.post('/Decoding', function(req, res, next) {
 	if(req.files.encodeFile){
 		console.dir(req.files);
 		var originalname = req.files.encodeFile.originalname;
 		var path = req.files.encodeFile.path;
 
+	}else{
+    	res.render('index', retData);
 	}
-    res.render('index', retData);
 });
 
 module.exports = router;
