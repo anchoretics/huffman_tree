@@ -5,7 +5,7 @@ var router = express.Router();
 
 var retData = { 
 	title: '哈夫曼编码',
-	author: 'margarate',
+	author: 'margaret',
 	encodeString: null
 };
 /* GET home page. */
