@@ -29,9 +29,10 @@ router.post('/Encoding', function(req, res, next) {
 		//encodeString = Encypt(encodeString);
 		//send encoded string
 		res.send(encodeString);
-		retData.encodeString = encodeString+'--';
+		retData.encodeString = encodeString;
 	}else{
-		res.render('index', retData);
+		retData.encodeString = '';
+		res.redirect('/');
 	}
 
 });

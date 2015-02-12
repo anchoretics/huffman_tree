@@ -3,8 +3,7 @@ var myAbout = {
 	about : function(req, res){
 		//res.send("Hello About !");
 		var ret = {
-			content: 'This is Margaret\'s persional website',
-			copyright: 'Margaret 2015'
+			content: 'This is Margaret\'s persional website'
 		};
 		res.render('about', ret);
 	}
