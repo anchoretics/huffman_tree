@@ -5,8 +5,8 @@ var users = {
 	},
 	user : function(req, res){
 		var userId = req.params.id;
-		res.render('user/list', {userName: 'Hello user:'+userId} );
+		res.render('user/user', {userName: 'Hello user:'+userId} );
 	}
 };
-
+;;
 module.exports = users;

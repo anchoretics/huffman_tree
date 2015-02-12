@@ -1,4 +1,5 @@
 var express = require('express');
+var myAbout = require('../controllers/about.js');
 var fs = require('fs');
 
 var router = express.Router();
@@ -8,6 +9,7 @@ var retData = {
 	author: 'margaret',
 	encodeString: null
 };
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', retData);
@@ -46,4 +48,6 @@ router.post('/Decoding', function(req, res, next) {
 	}
 });
 
+//add about module
+router.get('/about',myAbout.about);
 module.exports = router;
