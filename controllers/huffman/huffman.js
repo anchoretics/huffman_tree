@@ -28,7 +28,7 @@ var huffman = {
 				'Content-Type': 'text/plain',
 				'Content-Disposition': 'attachment; filename="decode.txt"'
 			});
-			//read posted file and Decrypt file's content
+			//Asynchronously read posted file and Decrypt file's content
 			fs.readFile(path, function (error, data) {
 				if (error) res.render('error',{error: error,message: 'Error happend when decode :'});
 				//decrypt data here
